@@ -1,0 +1,22 @@
+# Non-Type Template Parameter🔗
+(https://en.cppreference.com/cpp/language/template_parameters)
+
+- `type name`: `T v` in `integral_constant`🔗.
+
+# Type Template Parameter🔗
+(https://en.cppreference.com/cpp/language/template_parameters)
+
+## Factors
+
+- `type-parameter-key`: either `class` or `typename`
+- `type-constraint`
+
+- `type-parameter-key name`: `class T` in `integral_constant`🔗
+- `type-constraint name`
+
+# User-Defined Conversion Function🔗
+(https://en.cppreference.com/cpp/language/cast_operator)
+
+- `operator conversion-type-id`: participate in **implicit🔗** and **explicit expression🔗**. `operator value_type()` in `integral_constant`🔗.
+- `explicit operator conversion-type-id`: participate in **direct-initialization** and **explicit expression🔗**.
+- `explicit ( expression ) operator conversion-type-id`
