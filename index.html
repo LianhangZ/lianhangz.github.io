@@ -11,12 +11,12 @@
 
   #matrix {
     position: fixed;
-    inset: 0;
+    /* inset: 0; */
     z-index: -1;
   }
 
   .content {
-    position: relative;
+    /* position: relative; */
     padding: 40px 10%;
     text-shadow: 0 0 12px #00ff66;
   }
@@ -64,6 +64,53 @@
   .note-item p {
     margin: 6px 0 0;
   }
+
+  .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .code-block pre {
+    margin: 0;
+    padding: 1rem;
+    background: #0000004f;
+    /* color: #fff; */
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  .right-column {
+    /* line-height: 1.8; */
+  }
+
+  .inline-code {
+    /* display: inline-block; */
+
+    background: rgba(0, 255, 102, 0.15);
+    /* border: 1px solid rgba(0, 255, 102, 0.3); */
+    padding: 2px 6px;
+    border-radius: 6px;
+
+    /* color: #00ff66; */
+    /* font-family: monospace; */
+
+    /* overflow-wrap: anywhere; */
+    /* word-break: break-word; */
+    /* white-space: normal; */
+  }
+
+  .bullet-list {
+    padding-left: 1.5rem;
+    margin-block-start: 0em;
+  }
+
+  /*
+  .bullet-list li::marker {
+    color: #00ff66;
+  }
+  */
 </style>
 
 <div class="content">
@@ -71,6 +118,37 @@
   <p>Developer / AI / Cyber Security</p>
   <section class="note-card">
     <h2>Daily Notes</h2>
+
+    <div class="two-column">
+      <div class="code-block">
+    <pre><code>template&lt;class T, T v&gt;
+struct integral_constant {
+  T value = v;
+  using value_type = T;
+  using type = integral_constant;
+  operator value_type() { return value; }
+  value_type operator()() { return value; }
+};</code></pre>
+      </div>
+
+      <div class="right-column">
+        <p style="margin-block-end: 0em"><code class="inline-code">parameter-list</code> declares:</p>
+
+        <ul class="bullet-list">
+          <li>
+            a <strong>Type Template Parameter</strong> —
+            <code class="inline-code">class T</code>
+          </li>
+
+          <li>
+            a <strong>Non-Type Template Parameter</strong> —
+            <code class="inline-code">T v</code>
+          </li>
+        </ul>
+
+        <p><strong>Conversion Function</strong> - <code class="inline-code">operator value_type()</code></p>
+      </div>
+    </div>
 
     <div class="note-list">
       <div class="note-item">
