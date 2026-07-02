@@ -102,15 +102,18 @@
   }
 
   .bullet-list {
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
     margin-block-start: 0em;
   }
 
-  /*
   .bullet-list li::marker {
-    color: #00ff66;
+    /* color: #00ff66; */
   }
-  */
+
+  .bullet-list li {
+    margin-block-start: 5px;
+    /* margin-block-end: 5px; */
+  }
 </style>
 
 <div class="content">
@@ -119,9 +122,11 @@
   <section class="note-card">
     <h2>Daily Notes</h2>
 
-    <div class="two-column">
-      <div class="code-block">
-    <pre><code>template&lt;class T, T v&gt;
+    <div class="note-list">
+      <div class="note-item">
+        <div class="two-column">
+          <div class="code-block">
+            <pre><code>template&lt;class T, T v&gt;
 struct integral_constant {
   T value = v;
   using value_type = T;
@@ -129,28 +134,28 @@ struct integral_constant {
   operator value_type() { return value; }
   value_type operator()() { return value; }
 };</code></pre>
+          </div>
+
+          <div class="right-column">
+            <p style="margin-block-end: 0em"><code class="inline-code">parameter-list</code> declares:</p>
+
+            <ul class="bullet-list">
+              <li>
+                a <strong>Type Template Parameter</strong> —
+                <code class="inline-code">class T</code>
+              </li>
+
+              <li>
+                a <strong>Non-Type Template Parameter</strong> —
+                <code class="inline-code">T v</code>
+              </li>
+            </ul>
+
+            <p><strong>Conversion Function</strong> - <code class="inline-code">operator value_type()</code></p>
+          </div>
+        </div>
       </div>
 
-      <div class="right-column">
-        <p style="margin-block-end: 0em"><code class="inline-code">parameter-list</code> declares:</p>
-
-        <ul class="bullet-list">
-          <li>
-            a <strong>Type Template Parameter</strong> —
-            <code class="inline-code">class T</code>
-          </li>
-
-          <li>
-            a <strong>Non-Type Template Parameter</strong> —
-            <code class="inline-code">T v</code>
-          </li>
-        </ul>
-
-        <p><strong>Conversion Function</strong> - <code class="inline-code">operator value_type()</code></p>
-      </div>
-    </div>
-
-    <div class="note-list">
       <div class="note-item">
         <span class="date">2026-06-08</span>
         <p>WebGL, Graphics Library. HTML manual: MDN HTML, WHATWG HTML Living Standard, web.dev Learn HTML.</p>
