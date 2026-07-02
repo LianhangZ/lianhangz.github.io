@@ -9,6 +9,8 @@
     <h2>Daily Notes</h2>
 
     <div class="note-list">
+      <div id="two-column-container"></div>
+
       <div class="note-item">
         <div class="two-column">
           <div class="code-block">
@@ -94,4 +96,12 @@ function draw() {
 }
 
 setInterval(draw, 33);
+</script>
+
+<script>
+  fetch("two-column.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("two-column-container").innerHTML = html;
+    });
 </script>
