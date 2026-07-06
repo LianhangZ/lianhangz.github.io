@@ -86,6 +86,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
+  padding: 14px 0;
 }
 
 .code-block pre {
