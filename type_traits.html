@@ -37,4 +37,28 @@ struct integral_constant {
       </p>
     </div>
   </div>
+
+  <div class="two-column">
+    <div class="code-block">
+      <pre><code>template&lt;bool B, class T, class F&gt;
+struct conditional { using type = T; };</code></pre>
+    </div>
+    <div class="right-column">
+      <p></p>
+      <ul class="bullet-list">
+        <li>
+          a <strong>Non-Type Template Parameter</strong> -
+          <code class="inline-code">bool B</code>
+        </li>
+        <li>
+          a <strong>Type Template Parameter</strong> -
+          <code class="inline-code">class T</code>
+        </li>
+        <li>
+          a <strong>Type Template Parameter</strong> -
+          <code class="inline-code">class F</code>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
